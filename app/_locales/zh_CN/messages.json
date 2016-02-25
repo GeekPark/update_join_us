@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "GeekPark: update join us data",
+    "message": "更新招聘信息",
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "update join_us page for geekpark.net",
+    "message": "极客公园招聘信息更新插件",
     "description": "The description of the application"
   }
 }

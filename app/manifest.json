@@ -4,15 +4,31 @@
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
-    "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
   "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/chromereload.js",
-      "scripts/background.js"
+      "scripts/chromereload.js"
     ]
   },
-  "permissions": []
+  "options_ui": {
+    "page": "./options.html",
+    "chrome_style": true
+  },
+  "permissions": [
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://hr.lagou.com/corpPosition/*"
+      ],
+      "js": [
+        "scripts/fetch.js"
+      ]
+    }
+  ]
 }

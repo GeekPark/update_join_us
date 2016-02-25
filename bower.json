@@ -2,7 +2,8 @@
   "name": "up-join-us",
   "private": true,
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
