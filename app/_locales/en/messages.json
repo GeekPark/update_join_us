@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "up_join_us",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "update join_us page for geekpark.net",
+    "description": "The description of the application"
+  }
+}
