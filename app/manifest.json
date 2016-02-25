@@ -27,8 +27,13 @@
         "http://hr.lagou.com/corpPosition/*"
       ],
       "js": [
-        "scripts/fetch.js"
+        "vendor/jquery.min.js",
+        "scripts/utils.js",
+        "scripts/main.js"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "lagou.html"
   ]
 }
