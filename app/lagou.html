@@ -1,21 +1,78 @@
-<a class="update-btn" href="javascript:;" id="__update_join_update-btn">一键同步</a>
-
 <style>
-  .update-btn {
-    position: absolute;
-    z-index: 999;
-    right: 20px;
-    top: 40px;
+  .__button {
     display: inline-block;
     background: #019875;
     color: #fff;
     font-size: 18px;
     padding: 5px 15px;
     border-radius: 5px;
+    margin-right: 10px;
   }
 
-  .update-btn:hover {
+  .__button:not('.disable'):hover {
     color: #fff;
     background: #1F9076;
   }
+
+  .__button.disable {
+    color: #444;
+    background: #aaa;
+  }
+
+  .__update-btn {
+    position: absolute;
+    z-index: 999;
+    right: 10px;
+    top: 40px;
+  }
+
+  .hide-template {
+    display: none;
+  }
+
+  .__result-area.show {
+    position: fixed;
+    z-index: 990;
+    background-color: #fff;
+    width: 50vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #019875;
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .__result-area li {
+    line-height: 30px;
+  }
+
+  .__result-area .title {
+    width: 150px;
+  }
+
+  .__result-area .mt {
+    margin-top: 20px;
+  }
 </style>
+
+<a class="__button __update-btn" href="javascript:;" id="__update_join_update-btn">一键同步</a>
+
+<div class="__result-area" id="__update_join_result-panel">
+  <div id="__update_join_fetching" style="color: #019875">数据正在抓取中，先选择所属部门吧...</div>
+
+  <ul>
+    <li class="hide-template">
+      <span class="title"></span>
+      <select>
+        <option value="100">请选择</option>
+      </select>
+    </li>
+  </ul>
+
+  <div class="mt">
+    <a id="__update_join_save-btn" href="javascript:;" class="__button disable">保存数据</a>
+    <a href="http://www.geekpark.net/zhuanti/job/" target="_blank" class="__button">去招聘页</a>
+  </div>
+</dvi>

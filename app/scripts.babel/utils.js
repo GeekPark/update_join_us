@@ -72,10 +72,23 @@ window.__pluginTool = (() => {
     });
   };
 
+  const saveData = files => {
+    const body = JSON.stringify({ files });
+
+    return getToken()
+            .then( token => {
+              return fetch(
+                `${API}/gists/${GISTID}`,
+                Object.assign({}, { method: 'PATCH' }, { body }, authHeader(token))
+              );
+            });
+  };
+
   return {
     getToken,
     testToken,
     getData,
+    saveData,
     k: {
       position: 'position.json',
       page: 'page.json',
