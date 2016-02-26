@@ -31,6 +31,14 @@
         "scripts/utils.js",
         "scripts/main.js"
       ]
+    },
+    {
+      "matches": [
+        "http://xyzabc.com/xxx"
+      ],
+      "js": [
+        "scripts/options.js"
+      ]
     }
   ],
   "web_accessible_resources": [
