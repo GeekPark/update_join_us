@@ -75,8 +75,10 @@ $(function () {
 
   function parse(data) {
     const $d = $(data);
+    const $request = $d.find('.job_request');
+    $request.find('.publish_time').remove();
     return {
-      request: $d.find('.job_request').html(),
+      request: $request.html(),
       des: $d.find('.job_bt').html()
     };
   }
